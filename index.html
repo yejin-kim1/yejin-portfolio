@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Kim Yejin Portfolio</title>
     <style>
-        /* General Styles */
+        /* General Reset and Font */
         * {
             margin: 0;
             padding: 0;
@@ -15,14 +15,13 @@
         }
 
         body {
-            background-color: #f0f0f0;
+            background-color: #f4f4f9;
             color: #333;
-            line-height: 1.6;
         }
 
         /* Navigation Bar */
         nav {
-            background-color: #ff4d4d;
+            background-color: #222;
             padding: 1rem;
             position: sticky;
             top: 0;
@@ -32,60 +31,70 @@
         nav ul {
             list-style: none;
             display: flex;
-            justify-content: center;
-        }
-
-        nav ul li {
-            margin: 0 15px;
+            justify-content: space-around;
         }
 
         nav ul li a {
             color: #fff;
             text-decoration: none;
-            font-size: 1.2rem;
+            font-size: 1.1rem;
             transition: color 0.3s ease;
         }
 
         nav ul li a:hover {
-            color: #ffcccc;
+            color: #f9b233;
         }
 
-        /* Section Styles */
+        /* Section Container */
         .section {
-            padding: 5rem 2rem;
+            padding: 3rem 5%;
             background-color: #fff;
-            text-align: center;
-            min-height: 100vh;
+            margin-bottom: 3rem;
+            border-radius: 12px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .section h2 {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+            color: #444;
+        }
+
+        .section-content {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+        }
+
+        /* About Section */
+        .about-text {
+            width: 60%;
+            font-size: 1.2rem;
+            line-height: 1.6;
+        }
+
+        /* Grid Style for Cards */
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
         }
 
         /* Card Style */
         .card {
             background-color: #fff;
-            padding: 2rem;
+            padding: 1.5rem;
             border-radius: 8px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            margin: 1rem auto;
-            width: 80%;
+            text-align: center;
         }
 
-        /* Shadow effect */
-        .shadow-box {
-            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
-            padding: 2rem;
-            border-radius: 8px;
-            background-color: #fff;
+        .card h3 {
+            margin-bottom: 1rem;
+            color: #f9b233;
         }
 
-        .hero-text h1 {
-            font-size: 3rem;
-            font-weight: bold;
-        }
-
-        .hero-text p {
-            font-size: 1.5rem;
-        }
-
-        /* Form Style */
+        /* Contact Form */
         form {
             display: flex;
             flex-direction: column;
@@ -102,7 +111,7 @@
         }
 
         input[type="submit"] {
-            background-color: #ff4d4d;
+            background-color: #222;
             color: #fff;
             border: none;
             cursor: pointer;
@@ -110,7 +119,7 @@
         }
 
         input[type="submit"]:hover {
-            background-color: #ff6666;
+            background-color: #f9b233;
         }
 
         /* Footer */
@@ -119,6 +128,10 @@
             color: #fff;
             text-align: center;
             padding: 1rem 0;
+        }
+
+        footer p {
+            margin: 0;
         }
 
     </style>
@@ -153,91 +166,84 @@
 
     <!-- Home Section -->
     <section id="home" class="section">
-        <div class="hero-text">
-            <h1>Welcome to Kim Yejin's Portfolio</h1>
-            <p>Customer Service Expert | Translator | Manager</p>
-        </div>
-    </section>
-
-    <!-- About Section -->
-    <section id="about" class="section">
-        <div class="card">
-            <h2>About Kim Yejin</h2>
-            <p>
-                I am Kim Yejin from the Republic of Korea, with over 5 years of experience in customer service, translation, and team management. My diverse skill set and global experiences across 20 countries allow me to provide exceptional service and leadership in various roles.
-            </p>
+        <h2>Welcome to Kim Yejin's Portfolio</h2>
+        <div class="section-content">
+            <div class="about-text">
+                <p>
+                    I am Kim Yejin, a customer service expert, translator, and team manager with over 5 years of experience. My diverse skills and global exposure in over 20 countries have allowed me to excel in various roles.
+                </p>
+            </div>
         </div>
     </section>
 
     <!-- Work Experience Section -->
     <section id="work-experience" class="section">
         <h2>Work Experience</h2>
-        <div class="shadow-box">
-            <h3>Global Village (Oct 2023 2024)</h3>
-            <p>Providing excellent customer service and training new employees to ensure high satisfaction.</p>
-        </div>
-        <div class="shadow-box">
-            <h3>Singsing Korean Clinic (Aug 2021 - 2023)</h3>
-            <p>Translated for foreign patients and handled bookings with care and professionalism.</p>
-        </div>
-        <div class="shadow-box">
-            <h3>Tour Company Manager (Mar 2019 - Dec 2020)</h3>
-            <p>Managed daily operations, designed tour packages, and ensured high client satisfaction.</p>
-        </div>
-        <div class="shadow-box">
-            <h3>PR Agent (Sep 2017 - Feb 2019)</h3>
-            <p>Developed marketing strategies and managed public relations campaigns.</p>
+        <div class="grid">
+            <div class="card">
+                <h3>Global Village (Oct 2023 - Present)</h3>
+                <p>Providing excellent customer service and training new employees to ensure high satisfaction.</p>
+            </div>
+            <div class="card">
+                <h3>Singsing Korean Clinic (Aug 2021 - 2023)</h3>
+                <p>Translated for foreign patients and handled bookings with care and professionalism.</p>
+            </div>
+            <div class="card">
+                <h3>Tour Company Manager (2019 - 2020)</h3>
+                <p>Managed daily operations and designed custom tour packages to enhance customer satisfaction.</p>
+            </div>
+            <div class="card">
+                <h3>PR Agent (2017 - 2019)</h3>
+                <p>Created marketing strategies and managed public relations campaigns for various clients.</p>
+            </div>
         </div>
     </section>
 
     <!-- Skills Section -->
     <section id="skills" class="section">
         <h2>Skills</h2>
-        <div class="shadow-box">
-            <h3>Languages</h3>
-            <p>English: Fluent</p>
-            <p>Japanese: B1 Level</p>
-            <p>Arabic: B1 Level</p>
-        </div>
-        <div class="shadow-box">
-            <h3>Key Skills</h3>
-            <p><strong>Multitasking</strong>: Able to manage multiple tasks efficiently, ensuring deadlines are met.</p>
-            <p><strong>Handling Pressure</strong>: Can work effectively in high-stress environments, maintaining quality service.</p>
-            <p><strong>Leadership</strong>: Experience managing teams and projects with a focus on achieving goals.</p>
-            <p><strong>Communication</strong>: Excellent verbal and written communication in multiple languages.</p>
+        <div class="grid">
+            <div class="card">
+                <h3>Languages</h3>
+                <p>English: Fluent</p>
+                <p>Japanese: B1 Level</p>
+                <p>Arabic: B1 Level</p>
+            </div>
+            <div class="card">
+                <h3>Key Skills</h3>
+                <p>Multitasking, Handling Pressure, Leadership, Communication, Team Management</p>
+            </div>
         </div>
     </section>
 
     <!-- Education Section -->
     <section id="education" class="section">
         <h2>Education & Certifications</h2>
-        <div class="shadow-box">
-            <h3>Hankuk University of Foreign Studies</h3>
-            <p>Major in Arabic Language & Business (GPA: 3.6/4.5)</p>
-        </div>
-        <div class="shadow-box">
-            <h3>Certifications</h3>
-            <p><strong>English Language Certification (Oman Exchange Student)</strong>: Recognized for proficiency in English during exchange program in Oman.</p>
-            <p><strong>Korean History License</strong>: Certified in Korean history with a deep understanding of cultural significance.</p>
-            <p><strong>Google Digital Marketing Certification</strong>: Gained expertise in online marketing strategies, SEO, and content marketing.</p>
+        <div class="grid">
+            <div class="card">
+                <h3>Hankuk University of Foreign Studies</h3>
+                <p>Major in Arabic Language & Business (GPA: 3.6/4.5)</p>
+            </div>
+            <div class="card">
+                <h3>Certifications</h3>
+                <p>English Language Cert (Oman Exchange Student), Korean History License, Google Digital Marketing Certification</p>
+            </div>
         </div>
     </section>
 
     <!-- Contact Section -->
     <section id="contact" class="section">
-        <div class="card">
-            <h2>Contact Me</h2>
-            <p><a href="mailto:jyk0319@naver.com">Kim Yejin</a></p>
-            <p><a href="tel:+821071267754">+82 10-7126-7754</a></p>
+        <h2>Contact Me</h2>
+        <p>Email: <a href="mailto:jyk0319@naver.com">Kim Yejin</a></p>
+        <p>Phone: <a href="tel:+821071267754">+82 10-7126-7754</a></p>
 
-            <!-- Contact Form -->
-            <form action="mailto:jyk0319@naver.com" method="post" enctype="text/plain">
-                <input type="text" name="name" placeholder="Your Name" required>
-                <input type="email" name="email" placeholder="Your Email" required>
-                <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
-                <input type="submit" value="Send Message">
-            </form>
-        </div>
+        <!-- Contact Form -->
+        <form action="mailto:jyk0319@naver.com" method="post" enctype="text/plain">
+            <input type="text" name="name" placeholder="Your Name" required>
+            <input type="email" name="email" placeholder="Your Email" required>
+            <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
+            <input type="submit" value="Send Message">
+        </form>
     </section>
 
     <!-- Footer -->
