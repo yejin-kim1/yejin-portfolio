@@ -15,7 +15,7 @@
         }
 
         body {
-            background-color: #fff;
+            background-color: #f0f0f0;
             color: #333;
             line-height: 1.6;
         }
@@ -54,18 +54,26 @@
         .section {
             padding: 5rem 2rem;
             background-color: #fff;
-            color: #333;
             text-align: center;
             min-height: 100vh;
         }
 
-        #home {
-            background: linear-gradient(rgba(255, 0, 0, 0.7), rgba(255, 0, 0, 0.7)), url('background.jpg') center/cover no-repeat;
-            color: #fff;
-            height: 100vh;
-            display: flex;
-            align-items: center;
-            justify-content: center;
+        /* Card Style */
+        .card {
+            background-color: #fff;
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            margin: 1rem auto;
+            width: 80%;
+        }
+
+        /* Shadow effect */
+        .shadow-box {
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+            padding: 2rem;
+            border-radius: 8px;
+            background-color: #fff;
         }
 
         .hero-text h1 {
@@ -77,18 +85,32 @@
             font-size: 1.5rem;
         }
 
-        /* Work Experience */
-        .work-item {
-            margin: 2rem 0;
+        /* Form Style */
+        form {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+            margin-top: 2rem;
         }
 
-        .work-item h3 {
-            color: #ff4d4d;
-            font-size: 1.5rem;
+        input, textarea {
+            padding: 0.75rem;
+            font-size: 1rem;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            width: 100%;
         }
 
-        .work-item p {
-            font-size: 1.1rem;
+        input[type="submit"] {
+            background-color: #ff4d4d;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #ff6666;
         }
 
         /* Footer */
@@ -98,6 +120,7 @@
             text-align: center;
             padding: 1rem 0;
         }
+
     </style>
     <script>
         // Smooth Scroll Functionality
@@ -132,83 +155,89 @@
     <section id="home" class="section">
         <div class="hero-text">
             <h1>Welcome to Kim Yejin's Portfolio</h1>
-            <p>Customer Service Expert | Translator | Manager | PR Agent</p>
+            <p>Customer Service Expert | Translator | Manager</p>
         </div>
     </section>
 
     <!-- About Section -->
     <section id="about" class="section">
-        <h2>About Kim Yejin</h2>
-        <p>
-            I am Kim Yejin from the Republic of Korea, with over 6 years of experience in customer service, public relations, translation, and team management. My diverse skill set and global experiences across 20 countries allow me to provide exceptional service, leadership, and problem-solving in various roles.
-        </p>
+        <div class="card">
+            <h2>About Kim Yejin</h2>
+            <p>
+                I am Kim Yejin from the Republic of Korea, with over 5 years of experience in customer service, translation, and team management. My diverse skill set and global experiences across 20 countries allow me to provide exceptional service and leadership in various roles.
+            </p>
+        </div>
     </section>
 
     <!-- Work Experience Section -->
     <section id="work-experience" class="section">
         <h2>Work Experience</h2>
-
-        <div class="work-item">
-            <h3>Global Village (Oct 2023 - Present)</h3>
+        <div class="shadow-box">
+            <h3>Global Village (Oct 2023 2024)</h3>
             <p>Providing excellent customer service and training new employees to ensure high satisfaction.</p>
         </div>
-        
-        <div class="work-item">
+        <div class="shadow-box">
             <h3>Singsing Korean Clinic (Aug 2021 - 2023)</h3>
             <p>Translated for foreign patients and handled bookings with care and professionalism.</p>
         </div>
-        
-        <div class="work-item">
-            <h3>Jumpsky Amusement Park Manager (May 2020 - Aug 2021)</h3>
-            <p>Managed social media marketing, collaborated with staff to improve customer experience and coordinated facility operations.</p>
+        <div class="shadow-box">
+            <h3>Tour Company Manager (Mar 2019 - Dec 2020)</h3>
+            <p>Managed daily operations, designed tour packages, and ensured high client satisfaction.</p>
         </div>
-
-        <div class="work-item">
-            <h3>Tour Company Manager (Jan 2019 - Dec 2019)</h3>
-            <p>Managed a tour company, overseeing operations, guiding customer tours, and coordinating bookings for international clients.</p>
+        <div class="shadow-box">
+            <h3>PR Agent (Sep 2017 - Feb 2019)</h3>
+            <p>Developed marketing strategies and managed public relations campaigns.</p>
         </div>
-
-        <div class="work-item">
-            <h3>PR Agent - Korea Tourism Organization (Mar 2018 - Dec 2018)</h3>
-            <p>Developed public relations strategies to promote Korean tourism, handled media inquiries, and built partnerships with international travel agencies.</p>
-        </div>
-
     </section>
 
     <!-- Skills Section -->
     <section id="skills" class="section">
-        <h2>Skills & Languages</h2>
-        <ul>
-            <li><strong>Languages:</strong></li>
-            <ul>
-                <li>English: Fluent</li>
-                <li>Korean: Native</li>
-                <li>Japanese: B1 (Intermediate)</li>
-                <li>Arabic: B1 (Intermediate)</li>
-            </ul>
-            <li><strong>Key Skills:</strong></li>
-            <ul>
-                <li>Multitasking and handling multiple projects efficiently</li>
-                <li>Strong communication and public relations skills</li>
-                <li>Team leadership and employee training</li>
-                <li>Customer service and problem-solving</li>
-                <li>Microsoft Office, social media management, and basic web design</li>
-                <li>Attention to detail and adaptability in fast-paced environments</li>
-            </ul>
-        </ul>
+        <h2>Skills</h2>
+        <div class="shadow-box">
+            <h3>Languages</h3>
+            <p>English: Fluent</p>
+            <p>Japanese: B1 Level</p>
+            <p>Arabic: B1 Level</p>
+        </div>
+        <div class="shadow-box">
+            <h3>Key Skills</h3>
+            <p><strong>Multitasking</strong>: Able to manage multiple tasks efficiently, ensuring deadlines are met.</p>
+            <p><strong>Handling Pressure</strong>: Can work effectively in high-stress environments, maintaining quality service.</p>
+            <p><strong>Leadership</strong>: Experience managing teams and projects with a focus on achieving goals.</p>
+            <p><strong>Communication</strong>: Excellent verbal and written communication in multiple languages.</p>
+        </div>
     </section>
 
     <!-- Education Section -->
     <section id="education" class="section">
-        <h2>Education</h2>
-        <p>Hankuk University of Foreign Studies - Major in Arabic Language & Business (GPA: 3.6/4.5)</p>
+        <h2>Education & Certifications</h2>
+        <div class="shadow-box">
+            <h3>Hankuk University of Foreign Studies</h3>
+            <p>Major in Arabic Language & Business (GPA: 3.6/4.5)</p>
+        </div>
+        <div class="shadow-box">
+            <h3>Certifications</h3>
+            <p><strong>English Language Certification (Oman Exchange Student)</strong>: Recognized for proficiency in English during exchange program in Oman.</p>
+            <p><strong>Korean History License</strong>: Certified in Korean history with a deep understanding of cultural significance.</p>
+            <p><strong>Google Digital Marketing Certification</strong>: Gained expertise in online marketing strategies, SEO, and content marketing.</p>
+        </div>
     </section>
 
     <!-- Contact Section -->
     <section id="contact" class="section">
-        <h2>Contact</h2>
-        <p>Email: jyk0319@naver.com</p>
-        <p>Phone: +82 10-7126-7754</p>
+        <div class="card">
+            <h2>Contact Me</h2>
+            <p><a href="mailto:jyk0319@naver.com">Kim Yejin</a></p>
+            <p><a href="tel:+821071267754">+82 10-7126-7754</a></p>
+
+            <!-- Contact Form -->
+            <form action="mailto:jyk0319@naver.com" method="post" enctype="text/plain">
+                <input type="text" name="name" placeholder="Your Name" required>
+                <input type="email" name="email" placeholder="Your Email" required>
+                <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
+                <input type="submit" value="Send Message">
+            </form>
+        </div>
     </section>
 
     <!-- Footer -->
